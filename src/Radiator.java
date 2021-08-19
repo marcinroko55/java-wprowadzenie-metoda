@@ -2,14 +2,16 @@ public class Radiator {
     char[] color;
     double weight;
     int power;
-//po co tutaj to przypisujemy?
-    Radiator(char[] color, double weight, int power){
+
+    //po co tutaj to przypisujemy?
+    Radiator(char[] color, double weight, int power) {
         this.color = color;
         this.weight = weight;
         this.power = power;
     }
-// czy w metodzie zawsze nazwy pól?
-    void display(){
+
+    // czy w metodzie zawsze nazwy pól?
+    void display() {
         System.out.println("----------------");
         System.out.print("Colour: ");
         for (char c : color) {
@@ -20,4 +22,10 @@ public class Radiator {
         System.out.println("Weight: " + weight);
         System.out.println("Power: " + power + "W");
     }
+
+    double powerInKwh() {
+//        zrobiłem rzutowanie (double)
+        return (double)power / 1000;
+    }
+
 }
