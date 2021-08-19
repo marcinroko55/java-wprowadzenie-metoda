@@ -17,5 +17,13 @@ public class Main {
         }
         radiators[1].weight = 119;
         radiators[1].display();
+        double powerInKwh = radiators[1].powerInKwh();
+        System.out.println("Power kWh: " + powerInKwh +"kWh");
+        if(powerInKwh >=5) {
+            System.out.println("High-power radiator.");
+        }else {
+            System.out.println("Low-power radiator ");
+        }
+
     }
 }
